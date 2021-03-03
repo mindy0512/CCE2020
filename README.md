@@ -1,6 +1,6 @@
 # CCE2020
 
-##基礎題_因數個數
+## 基礎題_因數個數
 ```C
 #include <stdio.h>
 int main()
@@ -18,7 +18,7 @@ int main()
 	printf("%d\n",x);
 }
 ```
-##基礎題_找倍數
+## 基礎題_找倍數
 ```C
 #include <stdio.h>
 int x[10]={};
@@ -37,7 +37,7 @@ int main()
 	printf("%d\n",y);
 }
 ```
-##基礎題_找零錢
+## 基礎題_找零錢
 ```C
 #include <stdio.h>
 int main()
@@ -50,7 +50,7 @@ int main()
 	printf("%d=50*%d+5*%d+1*%d\n",n,co50,co5,co1);
 }
 ```
-##基礎題_整數轉換為等級
+## 基礎題_整數轉換為等級
 ```C
 #include <stdio.h>
 int main()
@@ -72,7 +72,7 @@ int main()
 	else printf("F\n");
 }
 ```
-##進階題_A的B次方函數
+## 進階題_A的B次方函數
 ```C
 #include <stdio.h>
 int AB(int a,int b)
@@ -92,7 +92,7 @@ int main(void)
 	return 0;
 }
 ```
-##進階題_分式化簡
+## 進階題_分式化簡
 ```C
 #include <stdio.h>
 int main()
@@ -110,7 +110,7 @@ int main()
 	printf("%d %d\n",x,y);
 }
 ```
-##進階題_漸增數列相加
+## 進階題_漸增數列相加
 ```C
 #include <stdio.h>
 int main()
@@ -124,7 +124,7 @@ int main()
 		printf("%d\n",ans);
 }
 ```
-##進階題_讀入整數反序列印
+## 進階題_讀入整數反序列印
 ```C
 #include <stdio.h>
 int x[10]={};
