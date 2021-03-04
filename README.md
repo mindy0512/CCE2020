@@ -148,3 +148,71 @@ int main()
 	printf("\n");
 }
 ```
+## 指標
+```c
+#include <stdio.h>
+int main()
+{
+    int a=10,b=20,c=30;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+    int *p=&a;
+    *p=200;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+}
+
+```
+```c
+#include <stdio.h>
+int main()
+{
+    int a=10,b=20,c=30;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+    int *p=&a;
+    *p=200;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+    int *p2=&c;
+    *p2=300;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+}
+
+```
+```c
+#include <stdio.h>
+int main()
+{
+    int a=10,b=20,c=30;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+    int *p=&a;
+    *p=200;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+    int *p2=&c;
+    *p2=300;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+    
+    p2=p;
+    *p2=400;
+    printf("n1:%d n2:%d n3:%d\n", a,b,c);
+
+}
+
+```
+```c
+#include <stdio.h>
+int main()
+{
+    int a[3]={10,20,30};
+    printf("a[0]:%d a[1]:%d a[2]:%d\n", a[0],a[1],a[2]);
+    int *p=&a[0];
+    *p=200;
+    printf("a[0]:%d a[1]:%d a[2]:%d\n", a[0],a[1],a[2]);
+    int *p2=&a[2];
+    *p2=300;
+    printf("a[0]:%d a[1]:%d a[2]:%d\n", a[0],a[1],a[2]);
+
+    p2=p;
+    *p2=400;
+    printf("a[0]:%d a[1]:%d a[2]:%d\n", a[0],a[1],a[2]);
+
+}
+
+```
