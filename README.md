@@ -149,6 +149,7 @@ int main()
 }
 ```
 ## 指標
+### 指標_1
 ```c
 #include <stdio.h>
 int main()
@@ -161,6 +162,7 @@ int main()
 }
 
 ```
+### 指標_2
 ```c
 #include <stdio.h>
 int main()
@@ -176,6 +178,7 @@ int main()
 }
 
 ```
+### 指標_3
 ```c
 #include <stdio.h>
 int main()
@@ -196,6 +199,7 @@ int main()
 }
 
 ```
+### 指標_4
 ```c
 #include <stdio.h>
 int main()
