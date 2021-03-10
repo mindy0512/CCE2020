@@ -162,6 +162,7 @@ int main()
 }
 
 ```
+![](https://i.imgur.com/CtNZRa6.png)
 ### 指標_2
 ```c
 #include <stdio.h>
@@ -178,6 +179,7 @@ int main()
 }
 
 ```
+![](https://i.imgur.com/8HzXhv7.png)
 ### 指標_3
 ```c
 #include <stdio.h>
@@ -199,6 +201,7 @@ int main()
 }
 
 ```
+![](https://i.imgur.com/8vBYl1s.png)
 ### 指標_4
 ```c
 #include <stdio.h>
@@ -220,3 +223,4 @@ int main()
 }
 
 ```
+![](https://i.imgur.com/ZMz6s5O.png)
