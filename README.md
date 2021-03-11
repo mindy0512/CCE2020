@@ -279,7 +279,7 @@ int main()
 }
 ```
 ![09166080_3](https://user-images.githubusercontent.com/74175691/110758679-c0192000-8287-11eb-8952-a86444827ac3.png)
-##malloc()
+## malloc()
 ```C
 #include <stdio.h>
 #include <stdlib.h>
