@@ -224,3 +224,37 @@ int main()
 
 ```
 ![](https://i.imgur.com/ZMz6s5O.png)
+
+### 指標與陣列_1
+```C
+#include <stdio.h>
+int a[5]={0,10,20,30,40};
+int main()
+{
+    int *p=&a[2];
+    *p=222;
+
+    p=p+2;
+    *p = 666;
+
+}
+```
+![09166080_1](https://user-images.githubusercontent.com/74175691/110755990-93afd480-8284-11eb-8694-7348af618742.png)
+### 指標與陣列_2
+```C
+#include <stdio.h>
+int a[5]={0,10,20,30,40};
+int main()
+{
+    int *p=&a[2];
+    *p=222;
+
+    p=p+2;
+    *p = 666;
+
+    p--:
+    *p=555;
+
+}
+```
+![09166080_2](https://user-images.githubusercontent.com/74175691/110756029-a0342d00-8284-11eb-9149-ad8c060b85b3.png)
