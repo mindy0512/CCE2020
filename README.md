@@ -279,3 +279,18 @@ int main()
 }
 ```
 ![09166080_3](https://user-images.githubusercontent.com/74175691/110758679-c0192000-8287-11eb-8952-a86444827ac3.png)
+##malloc()
+```C
+#include <stdio.h>
+#include <stdlib.h>
+int a[5];
+int main()
+{
+    int b[5];
+    
+    int *p = (int *)malloc(sizeof(int)*5);
+
+    return 0;
+}
+```
+![09166080_4](https://user-images.githubusercontent.com/74175691/110764237-c3afa580-828d-11eb-86de-8279352cd4c0.png)
