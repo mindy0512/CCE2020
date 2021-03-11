@@ -258,3 +258,24 @@ int main()
 }
 ```
 ![09166080_2](https://user-images.githubusercontent.com/74175691/110756029-a0342d00-8284-11eb-9149-ad8c060b85b3.png)
+### 指標與陣列_3
+```C
+#include <stdio.h>
+int a[5]={0,10,20,30,40};
+int main()
+{
+    int *p=&a[2];
+    *p=222;
+
+    int *p2= p+2; //宣告
+    *p2=666;
+
+    p=p+2;  //使用
+    *p = 666;
+
+    p--:
+    *p=555;
+
+}
+```
+![09166080_3](https://user-images.githubusercontent.com/74175691/110758679-c0192000-8287-11eb-8952-a86444827ac3.png)
