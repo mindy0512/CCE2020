@@ -310,7 +310,7 @@ int main()
     printf("\n");
 }
 ```
-
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/09166080_1.png)
 ## Week05_字串_2
 ```C
 #include <stdio.h>
@@ -324,6 +324,7 @@ int main()
 }
 ```
 
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/09166080_2.png)
 ## Week05_字串_2bad
 ```C
 #include <stdio.h>
@@ -342,6 +343,7 @@ int main()
 }
 ```
 
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/09166080_2bad.png)
 ## Week05_字串與二維陣列_3
 ```C
 #include <stdio.h>
@@ -357,6 +359,7 @@ int main()
 }
 ```
 
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/09166080_3.png)
 ## Week05_二維陣列_4
 ```C
 #include <stdio.h>
@@ -371,3 +374,39 @@ int main()
     }
 }
 ```
+
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/09166080_4.png)
+
+## Week05_字串排列_5
+```C
+#include <stdio.h>
+#include <string.h>
+char a[100][10];
+int main()
+{
+	int n;
+	scanf("%d",&n);	
+	for(int i=0;i<n;i++)  ///用迴圈方式讀取輸入的英文
+	{
+		scanf("%s",a[i]);
+	}
+	
+	///字串排序
+	
+	char temp[10];
+	for(int i=0;i<n;i++){
+		for(int j=i+1;j<n;j++){
+			if( strcmp(a[i],a[j]) >0){  ///比大小
+				strcpy(temp,a[i]);
+				strcpy(a[i],a[j]);
+				strcpy(a[j],temp);
+			}
+		}
+	}
+	for(int i=0;i<n;i++){  ///排序完後顯示
+		printf("%s\n",a[i]);
+	}
+}
+```
+
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/09166080_5.png)
