@@ -294,3 +294,80 @@ int main()
 }
 ```
 ![09166080_4](https://user-images.githubusercontent.com/74175691/110764237-c3afa580-828d-11eb-86de-8279352cd4c0.png)
+## Week05_字串_1
+```C
+#include <stdio.h>
+char line[20]="233233233233233233";
+int main()
+{
+    char *p=line;
+    for(int i=0;line[i]!=0;i++)
+    {
+        p=&line[i];
+        char c=line[i];
+        if(c!='2') printf("%c",c);
+    }
+    printf("\n");
+}
+```
+
+## Week05_字串_2
+```C
+#include <stdio.h>
+int main()
+{
+    char line[10]="decline";
+    char line2[10]={'p','r','o','p','e','r','\0'};
+
+    printf("%s\n",line);
+    printf("%s\n",line2);
+}
+```
+
+## Week05_字串_2bad
+```C
+#include <stdio.h>
+int main()
+{
+    char line[10]="decline";
+    char line2[10]={'p','r','o','p','e','r','\0'};
+
+    printf("%s\n",line);
+    printf("%s\n",line2);
+
+    char line3[]="majority這是好的，沒問題，要多長有多長";
+    char line4[]={'m','a','j','o','r','i','t','y'};
+    printf("%s\n",line3);
+    printf("你相信嗎? 這是 line4:==%s==\n",line4);
+}
+```
+
+## Week05_字串與二維陣列_3
+```C
+#include <stdio.h>
+int main()
+{
+    char line[5][10]={"decline","proper","majority","bullet","shop"};
+    char *p;
+    for(int i=0;i<5;i++)
+    {
+        p = line[i];
+        printf("%s\n",line[i]);
+    }
+}
+```
+
+## Week05_二維陣列_4
+```C
+#include <stdio.h>
+int a[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+int main()
+{
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+```
