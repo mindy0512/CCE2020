@@ -411,7 +411,7 @@ int main()
 
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/09166080_5.png)
 
-##Week07 上方Week05_字串排列_5,改用 qsort() 快速排序
+## Week07 上方Week05_字串排列_5,改用 qsort() 快速排序
 ```C
 #include <stdio.h>
 #include <string.h>
