@@ -415,11 +415,6 @@ int main()
 ```C
 #include <stdio.h>
 #include <string.h>
-char a[100][10];
-int main()
-{
-	#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 char n[100][10];
 int compare(const void *p1,const void *p2)
@@ -441,7 +436,6 @@ int main(){
 	for(int i=0;i<x;i++){
 		printf("%s\n",n[i]);
 	}
-}
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW07_09166080_2.png)
