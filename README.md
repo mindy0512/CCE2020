@@ -439,3 +439,47 @@ int main(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW07_09166080_2.png)
+
+## Week08 CPE題目 (UVA10226) Hardwood species :(未完成)
+```C
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+char tree[1000000][32];
+int compare(const void *p1,const void *p2)
+{
+	return strcmp((char*)p1,(char*)p2);
+}
+int main()
+{
+	int T;
+	scanf("%d\n\n",&T);
+	for(int t=0;t<T;t++){
+		int N=0;
+		for(int i=0;  ;i++){
+			gets(tree[i]);
+			if(strcmp(tree[i],"")==0){
+				N=i;
+				break;
+			}
+		}
+		
+		qsort(tree,N,32,compare);
+		
+		int ans=1;
+		printf("%s ",tree[0]);
+		for(int i=0;i<N-1;i++){
+			if(strcmp(tree[i],tree[i+1])!=0){
+				printf("%.4f\n",100*ans/(float)N);
+				printf("%s ",tree[i+1]);
+				ans=1;
+			}else{
+				ans++;
+			}
+		}
+		printf("%.4f\n",100*ans/(float)N);
+
+	}
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW8_09166080_6.png)
