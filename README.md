@@ -440,6 +440,43 @@ int main(){
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW07_09166080_2.png)
 
+## Week08  CPE題目 (UVA10420) List of Conquests :
+```C
+#include <stdio.h>
+#include <string.h>
+char name[2000][80];
+char others[80];
+int main(){
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		scanf("%s",name[i]);
+		gets(others);
+	}
+	char temp[80];
+	for(int i=0;i<n;i++){
+		for(int j=i+1;j<n;j++){
+			if(strcmp(name[i],name[j])>0){
+				strcpy(temp,name[i]);
+				strcpy(name[i],name[j]);
+				strcpy(name[j],temp);
+			}
+		}
+	}
+	int ans=1;
+	printf("%s ",name[0]);
+	for(int i=0;i<n-1;i++){
+		if(strcmp(name[i],name[i+1])!=0){
+			printf("%d\n",ans);
+			printf("%s ",name[i+1]);
+			ans=1;
+		}else{
+			ans++;
+		}
+	}
+	printf("%d\n",ans);
+}
+```
 ## Week08 CPE題目 (UVA10226) Hardwood species :(未完成)
 ```C
 #include <stdio.h>
@@ -482,4 +519,4 @@ int main()
 	}
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW8_09166080_6.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW8_09166080_5.png)
