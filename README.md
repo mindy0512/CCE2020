@@ -537,3 +537,28 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_1.png)
+## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(未完成)(大小寫處理)
+```C
+#include <stdio.h>
+char line[10000];
+int main()
+{
+	int n;
+	scanf("%d\n",&n);
+	
+	for(int i=0;i<n;i++){
+		gets(line);
+		
+		//題目答案為大寫，所以要小寫轉大寫
+		//先判斷全部的句子，是英文大寫?小寫?不是英文?
+		for(int k=0;line[k]!=0;k++){
+			char c=line[k];
+			if(c>='A'&&c<='Z') printf("大");
+			else if(c>='a'&&c<='z') printf("小");
+			else printf("他");
+		}
+	}
+	
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_2.png)
