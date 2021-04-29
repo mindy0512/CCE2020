@@ -530,7 +530,7 @@ int main()
 	scanf("%d\n",&n);
 	
 	for(int i=0;i<n;i++){
-		gets(line);
+		gets(line); ///scanf讀入至空行，gets是讀入至跳行
 		printf("%s\n",line);
 	}
 	
