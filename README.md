@@ -594,3 +594,46 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_3.png)
+## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(未完成)(大小寫統計)
+```C
+#include <stdio.h>
+char line[10000];
+int ans[26];
+char alphabet[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+int main()
+{
+	int n;
+	scanf("%d\n",&n);
+	for(int i=0;i<n;i++){
+		gets(line);
+		//題目答案為大寫，所以要小寫轉大寫
+		//先判斷全部的句子，是英文大寫?小寫?不是英文?
+		//判斷完後並統計
+		for(int k=0;line[k]!=0;k++){
+			char c=line[k];
+			if(c>='A'&&c<='Z') ans[c-'A']++;
+			else if(c>='a'&&c<='z') ans[c-'a']++;
+		}
+	}
+	
+	//排序(題目是先統計數字大到小，如果統技術一樣就找字母排序)
+	for(int i=0;i<26;i++){
+		for(int j=i+1;j<26;j++){
+			if(ans[i]<ans[j] || (ans[i]==ans[j]&&alphabet[i]>alphabet[j])){
+				int temp=ans[i];
+				ans[i]=ans[j];
+				ans[j]=temp;
+				char temp2=alphabet[i];
+				alphabet[i]=alphabet[j];
+				alphabet[j]=temp2;
+			}
+		}
+	}
+	//印出統計結果(統計結果為0的不要印出來)
+	for(int i=0;i<26;i++){
+		if(ans[i]>0) printf("%c %d\n",alphabet[i],ans[i]);
+	}
+	
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_4.png)
