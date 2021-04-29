@@ -520,3 +520,20 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW8_09166080_5.png)
+## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(未完成)(先讀入句子)
+```C
+#include <stdio.h>
+char line[10000];
+int main()
+{
+	int n;
+	scanf("%d\n",&n);
+	
+	for(int i=0;i<n;i++){
+		gets(line);
+		printf("%s\n",line);
+	}
+	
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/HW8_09166080_5.png)
