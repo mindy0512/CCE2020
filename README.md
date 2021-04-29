@@ -637,7 +637,7 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_4.png)
-## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(為完成)(排序用Qsort)
+## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(未完成)(排序用Qsort)
 (還有字母排序問題)
 ```C
 #include <stdio.h>
@@ -683,3 +683,50 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_5.png)
+## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(完成)(排序用Qsort)
+```C
+#include <stdio.h>
+#include <stdlib.h>
+char line[10000];
+typedef struct {
+	int ans; //int ans[26];
+	char c;//char alphabet[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}BOX;
+BOX array[26];
+int compare(const void *p1,const void *p2){
+	if( ((BOX*)p1)->ans > ((BOX*)p2)->ans) return -1;
+	else if(((BOX*)p1)->ans < ((BOX*)p2)->ans) return +1;
+	else if( ((BOX*)p1)->c > ((BOX*)p2)->c) return +1; //上方的是數字大排前面，這裡是字母小排前面，所以比較符號會顛倒
+	else if( ((BOX*)p1)->c < ((BOX*)p2)->c) return -1;
+	else return 0; //ans相等，比字母
+}
+int main()
+{
+	for(int i=0;i<26;i++) array[i].c = 'A'+i;
+	
+	int n;
+	scanf("%d\n",&n);
+	for(int i=0;i<n;i++){
+		gets(line);
+		//題目答案為大寫，所以要小寫轉大寫
+		//先判斷全部的句子，是英文大寫?小寫?不是英文?
+		//判斷完後並統計
+		for(int k=0;line[k]!=0;k++){
+			char c=line[k];
+			if(c>='A'&&c<='Z') array[c-'A'].ans++;
+			else if(c>='a'&&c<='z') array[c-'a'].ans++;
+		}
+	}
+	
+	//排序(題目是先統計數字大到小，如果統技術一樣就找字母排序)
+	//用Qsort
+	qsort(array,26,sizeof(BOX),compare);
+
+	//印出統計結果
+	for(int i=0;i<26;i++){
+		if(array[i].an s> 0) printf("%c %d\n",array[i].c,array[i].ans);
+	}
+	
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_6.png)
