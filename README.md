@@ -594,7 +594,7 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_3.png)
-## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(未完成)(大小寫統計)
+## Week10 CPE題目 (UVA10008) What's Cryptanalysis? :(未完成)(統計排序)
 ```C
 #include <stdio.h>
 char line[10000];
