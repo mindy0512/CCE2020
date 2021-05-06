@@ -802,10 +802,10 @@ int compare( const void *p1, const void *p2 )
 {//            轉成「字串的指標」
 	
 	char *s1 = (char*)p1;
-    char *s2 = (char*)p2;
-    if( strcmp(s1,s2)>0 ) return 1;
-    if( strcmp(s1,s2)==0 ) return 0;
-    if( strcmp(s1,s2)<0 ) return -1;
+	char *s2 = (char*)p2;
+	if( strcmp(s1,s2)>0 ) return 1;
+	if( strcmp(s1,s2)==0 ) return 0;
+	if( strcmp(s1,s2)<0 ) return -1;
 
 }
 int main()
