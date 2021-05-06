@@ -730,7 +730,7 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_6.png)
-## Week11 Typedef
+## Week11 Typedef_1
 ```C
 #include <stdio.h>
 unsigned char c;
@@ -746,3 +746,23 @@ int main()
 ```
 
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W11_09166080_1.png)
+## Week11 Typedef_2
+```C
+#include <stdio.h>
+typedef struct data{
+    char c;
+    int ans;
+} DATA;
+
+DATA listA;
+
+int main()
+{
+    listA.c = 'A';
+    listA.ans = 1;
+
+    printf("%c %d\n", listA.c, listA.ans);
+}
+
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W11_09166080_2.png)
