@@ -730,3 +730,19 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W10_09166080_6.png)
+## Week11 Typedef
+```C
+#include <stdio.h>
+unsigned char c;
+typedef unsigned char uchar;
+uchar d;
+int main()
+{
+    c = 'A';
+    d = c;
+    printf("%c",d);
+}
+
+```
+
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W11_09166080_1.png)
