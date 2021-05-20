@@ -887,3 +887,20 @@ void mousePressed(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_4.png)
+
+## Week13 Processing基本程式_簡易時鐘
+```JAVA
+void setup(){
+  size(1024,400); //視窗大小
+}
+void draw(){
+  background(#538352);  //背景顏色
+  int s = second();  //時間 秒(0~59)
+  int m = minute();  //時間 分(0~59)
+  int h = hour();    //時間 時(0~23)
+  textSize(80);
+  text(h+":"+m+":"+s, 100,200);
+    //數字：數字：數字
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_5.png)
