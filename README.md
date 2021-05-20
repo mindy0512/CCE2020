@@ -904,3 +904,49 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_5.png)
+
+## Week13 Processing基本程式_簡易倒數計時_1
+```JAVA
+void setup(){
+  size(1024,400); //視窗大小
+  textFont(createFont("標楷體",80));  //給中文字體與大小
+}
+void draw(){
+  background(#538352);  //背景顏色
+  int s = second();  //時間 秒(0~59)
+  int m = minute();  //時間 分(0~59)
+  int h = hour();    //時間 時(0~23)
+  textSize(80);
+  text(h+":"+m+":"+s, 100,200);
+    //數字：數字：數字
+  int total = s+60*m+60*60*h;  //總秒數
+  int closeH=17, closeM=40,closeS=0;  //截止時間
+  int closetotal=closeS+closeM*60+closeH*60*60;  //截止時間總秒數
+  int ans = closetotal - total;  //距離截止時間還有多少秒
+  text("剩下幾秒："+ans,100,100);  //印出
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_6.png)
+
+## Week13 Processing基本程式_簡易倒數計時_2
+```JAVA
+void setup(){
+  size(1024,400); //視窗大小
+  textFont(createFont("標楷體",80));  //給中文字體與大小
+}
+void draw(){
+  background(#538352);  //背景顏色
+  int s = second();  //時間 秒(0~59)
+  int m = minute();  //時間 分(0~59)
+  int h = hour();    //時間 時(0~23)
+  textSize(80);
+  text(h+":"+m+":"+s, 100,200);
+    //數字：數字：數字
+  int total = s+60*m+60*60*h;  //總秒數
+  int closeH=17, closeM=40,closeS=0;  //截止時間
+  int closetotal=closeS+closeM*60+closeH*60*60;  //截止時間總秒數
+  int ans = closetotal - total;  //距離截止時間還有多少秒
+  text("剩下"+ans/60/60+":"+ans/60+":"+ans%60,100,100);  //印出
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_7.png)
