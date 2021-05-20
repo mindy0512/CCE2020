@@ -835,3 +835,55 @@ int main()
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W11_09166080_4.png)
+
+## Week13 Processing基本程式_視窗大小&背景顏色
+```JAVA
+size(1024,400);  //視窗大小
+background(#538352);  //背景顏色
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_1.png)
+## Week13 Processing基本程式_滑鼠點擊_1
+```JAVA
+void setup(){ //只做一次的設定
+  size(1024,400);
+}
+void draw(){ //互動版本，每秒畫60fps
+  if( mousePressed ) background(#76D1CB); 
+  else background(#538352);
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_2.png)
+## Week13 Processing基本程式_滑鼠點擊_2
+```JAVA
+void setup(){ //只做一次的設定
+  size(1024,400);
+}
+void draw(){ //互動版本，每秒畫60fps
+  if( mousePressed ) background(#76D1CB); 
+  else background(#538352);
+  text(a,512,200); //顯示出文字test(文字,X,Y);
+}
+int a=0;
+void mousePressed(){
+  a++;  //累積滑鼠點擊次數
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_3.png)
+## Week13 Processing基本程式_文字設定
+```JAVA
+void setup(){ //只做一次的設定
+  size(1024,400);
+}
+void draw(){ //互動版本，每秒畫60fps
+  if( mousePressed ) background(#76D1CB); 
+  else background(#538352);
+  textSize(36);  //設定文字大小
+  text("中文壞掉Now a is:"+a,512,200); //顯示出文字test(文字,X,Y);
+       //中文會無法顯示
+}
+int a=0;
+void mousePressed(){
+  a++;  //累積滑鼠點擊次數
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_4.png)
