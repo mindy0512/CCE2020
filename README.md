@@ -1008,7 +1008,7 @@ void draw(){
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_4.png)
 
-## Week13 Processing基本程式_運用陣列做出抽獎_一個一個顯示
+## Week13 Processing基本程式_運用陣列做出抽獎_一個一個顯示_
 ```JAVA
 int []a= new int[47];//JAVA的陣列
 void setup(){
@@ -1033,3 +1033,32 @@ void mousePressed(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_5.png)
+## Week13 Processing基本程式_運用陣列做出抽獎_一個一個顯示_2
+```JAVA
+int []a= new int[47];//JAVA的陣列
+void setup(){
+   size(500,200);  //視窗大小
+   textSize(30);  //字體大小
+   for(int i=0;i<47;i++) a[i]=i;  //讓a[i]的陣列裡，會先放整齊對應的數字
+   for(int i=0;i<1000;i++){
+     int i1=(int)random(47);  //第一個數字亂數取
+     int i2=(int)random(47);  //第二個數字亂數取
+     int temp=a[i1];a[i1]=a[i2];a[i2]=temp;  //交換
+   }//先洗好牌
+}
+int N=0;
+void draw(){
+  background(#5DB46C);
+  textAlign(CENTER,CENTER);  //文字對齊:中，中
+  for(int i=0;i<N;i++){  //顯示N個
+    fill(255); //顏色填充:白
+    ellipse( i*80+40,100,55,55);  //畫圓
+    fill(0);  //顏色填充：黑
+    text(a[i],i*80+40,100);  
+  }
+}
+void mousePressed(){
+  N++;  //每點擊一次就多顯示
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_6.png)
