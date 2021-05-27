@@ -1081,3 +1081,41 @@ void mousePressed(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_6.PNG)
+
+## Week14 Processing基本程式_運用陣列做出抽獎_一個一個顯示_動態移動
+```JAVA
+int []a= new int[47];//JAVA的陣列
+void setup(){
+   size(500,200);  //視窗大小
+   textSize(30);  //字體大小
+   for(int i=0;i<47;i++) a[i]=i;  //讓a[i]的陣列裡，會先放整齊對應的數字
+   for(int i=0;i<1000;i++){
+     int i1=(int)random(47);  //第一個數字亂數取
+     int i2=(int)random(47);  //第二個數字亂數取
+     int temp=a[i1];a[i1]=a[i2];a[i2]=temp;  //交換
+   }//先洗好牌
+}
+int N=0,rolling=0;
+void draw(){
+  background(#5DB46C);
+  textAlign(CENTER,CENTER);  //文字對齊:中，中
+  for(int i=0;i<N;i++){  //顯示N個
+    int x=i*80+40;
+    if(i==N-1 && rolling>0){
+      x+=rolling;
+      rolling-=3;
+    }
+    fill(255); //顏色填充:白
+    ellipse( x,100,55,55);  //畫圓
+    fill(128);
+    text(a[i],x+2,100+2);
+    fill(0);  //顏色填充：黑
+    text(a[i],x,100);  
+  }
+}
+void mousePressed(){
+  rolling = 500;
+  N++;  //每點擊一次就多顯示
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_.PNG)
