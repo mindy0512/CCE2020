@@ -988,24 +988,22 @@ void mousePressed(){
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_3.png)
 ## Week13 Processing基本程式_運用陣列排出亂數的樣子
 ```JAVA
-int []a={1,2,3,4,5,6,7,8,9,10};  //JAVA寫法
-int i1,i2;
+int []a= new int[47];//JAVA的陣列
 void setup(){
-  size(400,100);
-  textSize(30);
+   size(500,200);  //視窗大小
+   textSize(30);  //字體大小
+   for(int i=0;i<47;i++) a[i]=i;  //讓a[i]的陣列裡，會先放整齊對應的數字
+   for(int i=0;i<1000;i++){
+     int i1=(int)random(47);  //第一個數字亂數取
+     int i2=(int)random(47);  //第二個數字亂數取
+     int temp=a[i1];a[i1]=a[i2];a[i2]=temp;  //交換
+   }//先洗好牌
 }
 void draw(){
   background(#5DB46C);
-  for(int i=0;i<10;i++){
-    text(a[i],i*40,50);
+  for(int i=0;i<5;i++){
+    text(a[i],i*80,100);  //顯示出前五個
   }
-  rect(i1*40, 50, 30, 30);  //下方顯示方塊表示交換的數值
-  rect(i2*40, 50, 30, 30);  //下方顯示方塊表示交換的數值
-}
-void mousePressed(){
-  i1=(int)random(10);  //第一個數字亂數取
-  i2=(int)random(10);  //第二個數字亂數取
-  int temp=a[i1];a[i1]=a[i2];a[i2]=temp;  //交換
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_4.png)
