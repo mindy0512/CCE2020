@@ -951,7 +951,7 @@ void draw(){
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_7.png)
 
-## Week14 Processing基本程式_(浮點數)亂數_1
+## Week14 Processing基本程式_(浮點數)亂數
 ```JAVA
 void setup(){
   float ans = random(60);  //亂數,會是小於60的浮點數
@@ -963,6 +963,25 @@ void draw(){//畫圖，每秒60次
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_1.PNG)
+## Week14 Processing基本程式_(整數)亂數
+```JAVA
+int ans=0;
+void setup(){
+  size(300,300);
+  //float ans = random(60);  //亂數,會是小於60的浮點數
+    textSize(30);  //字體大小
+  //text( ans, 20,20);  //顯示ans
+}
+void draw(){//畫圖，每秒60次
+  background(#5DB46C);  //背景
+  text(ans, 20,30);  //顯示ans
+
+}
+void mousePressed(){
+  ans = (int)random(60);  //原浮點數不能直接便整數，所以需要轉型
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_.PNG)
 ## Week14 Processing基本程式_兩個數值交換
 ```JAVA
 int []a={1,2,3,4,5,6,7,8,9,10};  //JAVA寫法
