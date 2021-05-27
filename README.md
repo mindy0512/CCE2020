@@ -951,7 +951,7 @@ void draw(){
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_7.png)
 
-## Week13 Processing基本程式_亂數_1
+## Week13 Processing基本程式_(浮點數)亂數_1
 ```JAVA
 void setup(){
   float ans = random(60);  //亂數,會是小於60的浮點數
@@ -963,23 +963,49 @@ void draw(){//畫圖，每秒60次
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_1.png)
-## Week13 Processing基本程式_亂數_2
+## Week13 Processing基本程式_兩個數值交換
 ```JAVA
-int ans=0;
+int []a={1,2,3,4,5,6,7,8,9,10};  //JAVA寫法
+int i1,i2;
 void setup(){
-  size(300,300);
-  //float ans = random(60);  //亂數,會是小於60的浮點數
-    textSize(30);  //字體大小
-  //text( ans, 20,20);  //顯示ans
+  size(400,100);
+  textSize(30);
 }
-void draw(){//畫圖，每秒60次
-  background(#5DB46C);  //背景
-  text(ans, 20,30);  //顯示ans
-
+void draw(){
+  background(#5DB46C);
+  for(int i=0;i<10;i++){
+    text(a[i],i*40,50);
+  }
+  rect(i1*40, 50, 30, 30);  //下方顯示方塊表示交換的數值
+  rect(i2*40, 50, 30, 30);  //下方顯示方塊表示交換的數值
 }
 void mousePressed(){
-  ans = (int)random(60);  //原浮點數不能直接便整數，所以需要轉型
+  i1=(int)random(10);  //第一個數字亂數取
+  i2=(int)random(10);  //第二個數字亂數取
+  int temp=a[i1];a[i1]=a[i2];a[i2]=temp;  //交換
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_2.png)
-
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_3.png)
+## Week13 Processing基本程式_運用陣列排出亂數的樣子
+```JAVA
+int []a={1,2,3,4,5,6,7,8,9,10};  //JAVA寫法
+int i1,i2;
+void setup(){
+  size(400,100);
+  textSize(30);
+}
+void draw(){
+  background(#5DB46C);
+  for(int i=0;i<10;i++){
+    text(a[i],i*40,50);
+  }
+  rect(i1*40, 50, 30, 30);  //下方顯示方塊表示交換的數值
+  rect(i2*40, 50, 30, 30);  //下方顯示方塊表示交換的數值
+}
+void mousePressed(){
+  i1=(int)random(10);  //第一個數字亂數取
+  i2=(int)random(10);  //第二個數字亂數取
+  int temp=a[i1];a[i1]=a[i2];a[i2]=temp;  //交換
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_4.png)
