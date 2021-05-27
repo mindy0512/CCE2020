@@ -950,3 +950,16 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W13_09166080_7.png)
+
+## Week13 Processing基本程式_亂數
+```JAVA
+void setup(){
+  float ans = random(60);  //亂數,會是小於60的浮點數
+  text( ans, 20,20);  //顯示ans
+}
+void draw(){//畫圖，每秒60次
+
+
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_1.png)
