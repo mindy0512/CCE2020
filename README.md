@@ -962,7 +962,7 @@ void draw(){//畫圖，每秒60次
 
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_1.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_1.PNG)
 ## Week14 Processing基本程式_兩個數值交換
 ```JAVA
 int []a={1,2,3,4,5,6,7,8,9,10};  //JAVA寫法
@@ -985,7 +985,7 @@ void mousePressed(){
   int temp=a[i1];a[i1]=a[i2];a[i2]=temp;  //交換
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_3.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_3.PNG)
 ## Week14 Processing基本程式_運用陣列做出抽獎_一次顯示五個數
 ```JAVA
 int []a= new int[47];//JAVA的陣列
@@ -1006,7 +1006,7 @@ void draw(){
   }
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_4.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_4.PNG)
 
 ## Week14 Processing基本程式_運用陣列做出抽獎_一個一個顯示_
 ```JAVA
@@ -1032,7 +1032,7 @@ void mousePressed(){
   N++;  //每點擊一次就多顯示
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_5.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_5.PNG)
 ## Week14 Processing基本程式_運用陣列做出抽獎_一個一個顯示_2
 ```JAVA
 int []a= new int[47];//JAVA的陣列
@@ -1061,4 +1061,4 @@ void mousePressed(){
   N++;  //每點擊一次就多顯示
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_6.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_6.PNG)
