@@ -1181,3 +1181,25 @@ void mousePressed(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_4.png)
+## Week15 Processing基本程式_結合倒數計時十秒與撥放聲音檔
+```JAVA
+import processing.sound.*;  //載入播放聲音套件
+SoundFile player;  //宣告聲音檔
+void setup(){//設定只做一次
+  size(400,200);
+  textSize(40); //字體大小
+  player = new SoundFile(this,"tada.mp3");  //聲音檔
+}
+void draw(){//畫圖，每秒60次
+  int s = second();
+  background(#81D184);
+  text(10 -s%11,100,100); //10~0有11個數
+  if(10-s%11 == 0 &&!player.isPlaying()){ 
+    //每十秒播放一次
+    //同時有60聲音播放會當掉，所以加上如果聲音檔沒播放時
+    //就是只有一個聲音檔播放
+    player.play(); 
+  }
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_5.png)
