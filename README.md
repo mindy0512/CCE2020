@@ -1150,6 +1150,7 @@ void draw(){//畫圖
 需要先下載套件  Sketch|Libraries|Add Libraries  搜尋Sound
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_0.png)
 
+參考網址：https://hackmd.io/CRq72E8QQS20PcnXRrV79w?view
 
 ```JAVA
 import processing.sound.*;
