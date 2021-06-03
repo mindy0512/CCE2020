@@ -1131,5 +1131,17 @@ void draw(){//畫圖
   else background(#81D184);
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_1.PNG)
-
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_1.png)
+## Week15 Processing基本程式_利用秒數、餘數、減法,做出10到0的倒數計時
+```JAVA
+void setup(){//設定只做一次
+  size(400,200);
+  textSize(40); //字體大小
+}
+void draw(){//畫圖
+  int s = second();
+  background(#81D184);
+  text(10 -s%11,100,100); //10~0有11個數
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_2.png)
