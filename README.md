@@ -1233,6 +1233,6 @@ function draw(){//畫圖
 }
 ```
 
-有將此程式檔案放到githun資料夾為 W15_p5.js Mode
+有將此程式檔案放到githun資料夾為 W15_all
 
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_7.png)
