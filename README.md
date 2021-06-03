@@ -1160,4 +1160,24 @@ void mousePressed(){
   player.play();
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_3.png)
+## Week15 Processing基本程式_撥放聲音檔(新增IF正在播放聲音就停止聲音)
+```JAVA
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400,200);
+  player = new SoundFile(this,"bell.mp3");
+}
+void draw(){
+  background(#71AF74);
+}
+void mousePressed(){
+  if(player.isPlaying()){//如果再播放聲音
+    player.stop(); //聲音停止
+  }else{  //如果沒有播放聲音
+    player.play();  //聲音播放
+  }
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_4.png)
