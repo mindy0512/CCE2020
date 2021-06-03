@@ -1146,6 +1146,11 @@ void draw(){//畫圖
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_2.png)
 ## Week15 Processing基本程式_撥放聲音檔
+
+需要先下載套件  Sketch|Libraries|Add Libraries  搜尋Sound
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_0.png)
+
+
 ```JAVA
 import processing.sound.*;
 SoundFile player;
