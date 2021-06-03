@@ -1145,3 +1145,19 @@ void draw(){//畫圖
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_2.png)
+## Week15 Processing基本程式_撥放聲音檔
+```JAVA
+import processing.sound.*;
+SoundFile player;
+void setup(){
+  size(400,200);
+  player = new SoundFile(this,"tada.mp3");
+}
+void draw(){
+  background(#71AF74);
+}
+void mousePressed(){
+  player.play();
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_.png)
