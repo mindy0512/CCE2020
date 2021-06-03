@@ -1118,4 +1118,18 @@ void mousePressed(){
   N++;  //每點擊一次就多顯示
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_.PNG)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W14_09166080_7.PNG)
+
+## Week15 Processing基本程式_用second()秒鐘,奇偶數調背景色
+```JAVA
+void setup(){//設定只做一次
+  size(400,200);
+}
+void draw(){//畫圖
+  int s = second();
+  if(s%2==0) background(#5889CB);
+  else background(#81D184);
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_1.PNG)
+
