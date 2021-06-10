@@ -1312,7 +1312,7 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_5.PNG)
-## Week15 Processing基本程式_輪盤_2_輪盤自動轉動
+## Week15 Processing基本程式_輪盤_3_輪盤自動轉動
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1333,3 +1333,31 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_6.PNG)
+## Week15 Processing基本程式_輪盤_3_輪盤自動轉動
+
+```Javascript
+void setup(){  //設定(只做一次)
+  size(400,200);
+}
+float start=0,v=0.07;
+void draw(){
+  background(#83B499);
+  if(v > 0.001){ //速度很慢時,就不要再轉動了
+    start += v;  //位置、速度、加速度 (位置加上速度)
+    v *= 0.99;  //摩擦力，會讓速度變慢，位置、速度、加速度(速度加上加速度)
+  }
+  fill(#F0BE74);
+  textSize(30);
+  text( start,200,150);
+  text( v,200,170);
+  for(int i=0;i<24;i++){
+    float shift = 2*PI*i/24.0;
+    if(i%3==0) fill(#484848);
+    if(i%3==1) fill(#F0BE74);
+    if(i%3==2) fill(255);
+    if(i==0)  fill(#FF5252);
+    arc(100,100 ,180,180,shift+0+start,shift+PI/12+start); //(圓心X,圓心Y,寬,高,開始(幾度),結束(幾度))
+  }
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_7.PNG)
