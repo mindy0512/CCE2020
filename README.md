@@ -1236,7 +1236,7 @@ function draw(){//畫圖
 有將此程式檔案放到githun資料夾為 W15_all
 
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_7.png)
-## Week15 Processing基本程式_畫圓_1
+## Week15 Processing基本程式_畫圓_1_簡單畫圓
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1247,8 +1247,9 @@ void draw(){
   ellipse(50,50, 80,80); //畫圓(圓心X,圓心Y,寬,高)
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_1.png)
-## Week15 Processing基本程式_畫圓_2
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_1.PNG)
+
+## Week15 Processing基本程式_畫圓_2_進階畫圓
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1264,8 +1265,9 @@ void draw(){
   arc(50,50 ,80,80,0,stop); //(圓心X,圓心Y,寬,高,開始(幾度),結束(幾度))
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_2.png)
-## Week15 Processing基本程式_畫圓_2
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_2.PNG)
+
+## Week15 Processing基本程式_輪盤_1_做出輪盤樣子
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1274,29 +1276,60 @@ void setup(){  //設定(只做一次)
 void draw(){
   background(#83B499);
   fill(255);//顏色填滿
-  ellipse(50,50, 80,80); //畫圓(圓心X,圓心Y,寬,高)
-  fill(#F0BE74);//顏色填滿
-  float stop=mouseX/50.0;
-  text(stop,100,100); //顯示字
-  arc(50,50 ,80,80,0,stop); //(圓心X,圓心Y,寬,高,開始(幾度),結束(幾度))
-}
-```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_2.png)
-## Week15 Processing基本程式_輪盤_1
-
-```Javascript
-void setup(){  //設定(只做一次)
-  size(400,200);
-}
-void draw(){
-  background(#83B499);
-  fill(255);//顏色填滿
-  ellipse(50,50, 80,80); //畫圓(圓心X,圓心Y,寬,高)
+  ellipse(100,100, 180,180); //畫圓(圓心X,圓心Y,寬,高)
   fill(#F0BE74);//顏色填滿
   float start=mouseX/50.0;
-  textSize(30);
-  text(start,100,100); //顯示字
-  arc(50,50 ,80,80,start,0.2+start); //(圓心X,圓心Y,寬,高,開始(幾度),結束(幾度))
+  for(int i=0;i<24;i++){
+    float shift = 2*PI*i/24.0;
+    if(i%3==0) fill(0);
+    if(i%3==1) fill(#F0BE74);
+    if(i%3==2) fill(255);
+      arc(100,100 ,180,180,shift+0+start,shift+PI/12+start); //(圓心X,圓心Y,寬,高,開始(幾度),結束(幾度))
+  }
 }
 ```
-![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_2.png)
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_4.PNG)
+## Week15 Processing基本程式_輪盤_2_做出輪盤樣子
+
+```Javascript
+void setup(){  //設定(只做一次)
+  size(400,200);
+}
+void draw(){
+  background(#83B499);
+  fill(255);//顏色填滿
+  ellipse(100,100, 180,180); //畫圓(圓心X,圓心Y,寬,高)
+  fill(#F0BE74);//顏色填滿
+  float start=mouseX/50.0;
+  for(int i=0;i<24;i++){
+    float shift = 2*PI*i/24.0;
+    if(i%3==0) fill(#484848);
+    if(i%3==1) fill(#F0BE74);
+    if(i%3==2) fill(255);
+    if(i==0)  fill(#FF5252);
+    arc(100,100 ,180,180,shift+0+start,shift+PI/12+start); //(圓心X,圓心Y,寬,高,開始(幾度),結束(幾度))
+  }
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_5.PNG)
+## Week15 Processing基本程式_輪盤_2_輪盤自動轉動
+
+```Javascript
+void setup(){  //設定(只做一次)
+  size(400,200);
+}
+float start=0;
+void draw(){
+  background(#83B499);
+  if(start<10) start+=0.01;
+  for(int i=0;i<24;i++){
+    float shift = 2*PI*i/24.0;
+    if(i%3==0) fill(#484848);
+    if(i%3==1) fill(#F0BE74);
+    if(i%3==2) fill(255);
+    if(i==0)  fill(#FF5252);
+    arc(100,100 ,180,180,shift+0+start,shift+PI/12+start); //(圓心X,圓心Y,寬,高,開始(幾度),結束(幾度))
+  }
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_6.PNG)
