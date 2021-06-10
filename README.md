@@ -1333,7 +1333,7 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_6.PNG)
-## Week15 Processing基本程式_輪盤_3_輪盤自動轉動
+## Week15 Processing基本程式_輪盤_3_輪盤自動轉動(轉動速度從快變慢至停止)
 
 ```Javascript
 void setup(){  //設定(只做一次)
