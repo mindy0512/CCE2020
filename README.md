@@ -1509,3 +1509,49 @@ void keyReleased(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_6.PNG)
+## Week17 Processing基本程式_打字遊戲_1
+
+```Javascript
+String A="mother";
+String line = "";
+
+void setup(){
+  size(400,300);
+  textSize(40);
+}
+void draw(){
+  background(0);
+  text(A,100,100);
+  text(line+"|",100,150);
+}
+void keyPressed(){
+  line = line +key;
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_7.PNG)
+## Week17 Processing基本程式_打字遊戲_2_倒退鍵刪除
+
+```Javascript
+String A="mother";
+String line = "";
+void setup(){
+  size(400,300);
+  textSize(40);
+}
+void draw(){
+  background(0);
+  text(A,100,100);
+  text(line+"|",100,150);
+}
+void keyPressed(){
+  int len = line.length();  //字長度
+  if(key>='a' && key<='z')  line = line +key;  //除了小寫字母之外其他按鍵出的字都不會加入Line
+  if(key>='A' && key<='Z')  line = line +key;  //除了大寫字母之外其他按鍵出的字都不會加入Line
+  if(key == ENTER) {  //輸入完成跳行比對
+  }
+  if(key == BACKSPACE &&len>0){  //倒退鍵做刪除  //如果完全沒有輸入按下倒退鍵len會<0，程式會當掉，所以要再設一個條件len>0
+    line = line.substring(0,len-1);  //substring(A,B)擷取A~B的字，len-1為字長度-1，也是新輸入的字在字長度最後，-1去除。
+  }
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_8.PNG)
