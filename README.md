@@ -1236,7 +1236,7 @@ function draw(){//畫圖
 有將此程式檔案放到githun資料夾為 W15_all
 
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W15_09166080_7.png)
-## Week15 Processing基本程式_畫圓_1_簡單畫圓
+## Week16 Processing基本程式_畫圓_1_簡單畫圓
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1249,7 +1249,7 @@ void draw(){
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_1.PNG)
 
-## Week15 Processing基本程式_畫圓_2_進階畫圓
+## Week16 Processing基本程式_畫圓_2_進階畫圓
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1267,7 +1267,7 @@ void draw(){
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_2.PNG)
 
-## Week15 Processing基本程式_輪盤_1_做出輪盤樣子
+## Week16 Processing基本程式_輪盤_1_做出輪盤樣子
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1289,7 +1289,7 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_4.PNG)
-## Week15 Processing基本程式_輪盤_2_做出輪盤樣子
+## Week16 Processing基本程式_輪盤_2_做出輪盤樣子
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1312,7 +1312,7 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_5.PNG)
-## Week15 Processing基本程式_輪盤_3_輪盤自動轉動
+## Week16 Processing基本程式_輪盤_3_輪盤自動轉動
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1333,7 +1333,7 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_6.PNG)
-## Week15 Processing基本程式_輪盤_4_輪盤自動轉動(轉動速度從快變慢至停止)
+## Week16 Processing基本程式_輪盤_4_輪盤自動轉動(轉動速度從快變慢至停止)
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1361,7 +1361,7 @@ void draw(){
 }
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_7.PNG)
-## Week15 Processing基本程式_輪盤_5_輪盤自動轉動(滑鼠將亂數給輪盤轉動速度)
+## Week16 Processing基本程式_輪盤_5_輪盤自動轉動(滑鼠將亂數給輪盤轉動速度)
 
 ```Javascript
 void setup(){  //設定(只做一次)
@@ -1393,3 +1393,119 @@ void draw(){
 
 ```
 ![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W16_09166080_8.PNG)
+## Week17 Processing基本程式_字串
+
+```Javascript
+void setup(){  //設定
+  size(400,200);
+  textSize(40);
+}
+String line="hello"; //字串
+void draw(){
+  background(#91B78E);
+  text(line,100,100);  //可以將字串line顯示出來;
+  text("World",100,150);  //一般顯示"字"方式
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_1.PNG)
+## Week17 Processing基本程式_Key(對應你最後按下的鍵盤的建(字母、數、符號))
+
+```Javascript
+void setup(){  //設定
+  size(400,200);
+  textSize(40);
+}
+String line="hello"; //字串\
+char c='9';  //字元
+void draw(){
+  background(#91B78E);
+  text(line+c+100,100,100);  //可以將字串line顯示出來;
+  //發現字串的+，就是直接接字串
+  text("World"+key,100,150);  //一般顯示"字"方式
+  //key 會對應你最後按下的鍵盤的建(字母、數、符號)
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_2.PNG)
+## Week17 Processing基本程式_Key應用(判斷是否打字與顯示一樣)
+
+```Javascript
+void setup(){  //設定
+  size(400,200);
+  textSize(40);
+}
+char c='9';  //字元
+int win=0; //0:還沒贏，1:贏了
+void draw(){
+  background(#91B78E);
+  text("Press:"+c,100,100);
+  text("You :"+key,100,150);
+  if(c==key)  win=1;
+  else win=0;
+  if(win==1)  text("You Win!",100,50);
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_3.PNG)
+## Week17 Processing基本程式_charAt()
+
+```Javascript
+void setup(){  //設定
+  size(400,200);
+  textSize(40);
+}
+char c='9';  //字元
+String ans="abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWYZ";
+int win=0; //0:還沒贏，1:贏了
+void draw(){
+  background(#91B78E);
+  text("Press:"+c,100,100);
+  text("You :"+key,100,150);
+  if(c==key)  win=1;
+  else win=0;
+  if(win==1){
+    text("You Win!",100,50);
+    int i = int(random(26+26));  //亂數取下一個字
+    c=ans.charAt(i);  //更換字串其中亂數對應的字
+  }
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_4.PNG)
+## Week17 Processing基本程式_keyCode(左右)
+
+```Javascript
+void setup(){  //設定
+  size(400,200);
+  textSize(40);
+}
+int x=100,y=100;
+void draw(){
+  background(#91B78E);
+  rect(x,y,50,50); //畫方塊
+}
+void keyPressed(){
+  if(keyCode==LEFT) x-=10;  //按鍵盤左鍵移動方塊往左
+  if(keyCode==RIGHT) x+=10;  //按鍵盤右鍵移動方塊往右
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_5.PNG)
+## Week17 Processing基本程式_vx做相等速度移動
+
+```Javascript
+void setup(){  //設定
+  size(400,200);
+  textSize(40);
+}
+int x=100,y=100,vx=0,vy=0;
+void draw(){
+  background(#91B78E);
+  rect(x,y,50,50); //畫方塊
+  x+=vx;
+}
+void keyPressed(){
+  if(keyCode==LEFT) vx=-1;  //按鍵盤左鍵移動方塊往左
+  if(keyCode==RIGHT) vx=+1;  //按鍵盤右鍵移動方塊往右
+}
+void keyReleased(){
+  vx=0;
+}
+```
+![](https://github.com/mindy0512/CCE2020/blob/gh-pages/image/W17_09166080_6.PNG)
